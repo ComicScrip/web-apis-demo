@@ -7,6 +7,17 @@ const user = JSON.parse(localStorage.getItem('userData')) || {
   name: '',
   age: null,
 };
+/* same as :
+let user = {
+  name: '',
+  age: null,
+};
+const savedUser = localStorage.getItem('userData');
+if (savedUser) {
+  user = JSON.parse(savedUser);
+}
+*/
+
 // filling the inputs with values coming form localstorage
 nameInput.value = user.name;
 ageInput.value = user.age;
